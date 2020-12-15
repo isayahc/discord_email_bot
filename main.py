@@ -27,7 +27,7 @@ def wait_for_publishing(wait_minutes:int):
 def main():
     data = wait_for_publishing(5)
     hook_url = os.environ.get('discord_link')
-    send_message(data, hook_url)
+    send_message(data)
 
 #wsb usually publishes around 6am
 #start conquence then
@@ -50,7 +50,7 @@ if __name__=='__main__':
     sched.add_job(
         main, 
         'cron', 
-        minute =current_time.minute+5,
+        minute =current_time.minute+2,
         hour=current_time.hour
     )
     sched.start()
