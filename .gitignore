@@ -1,0 +1,12 @@
+#folders
+/.venv
+/venv
+/.vscode
+*/__pycache__
+
+
+#files
+geckodriver.log
+.env
+**.env
+.flaskenv
