@@ -50,7 +50,7 @@ if __name__=='__main__':
     sched.add_job(
         main, 
         'cron', 
-        minute =current_time.minute+1,
+        minute =current_time.minute+5,
         hour=current_time.hour
     )
     sched.start()
